@@ -12,6 +12,40 @@
   </body>
 
     <script>
+      const person = {
+        name: {
+          first: 'Bob',
+          last: 'Smith',
+        },
+        age: 32,
+        bio() {
+          console.log(`${this.name.first} ${this.name.last}
+          is ${this.age} years old.`);
+        },
+        introduceSelf() {
+          console.log(`Hi! I'm ${this.name.first}.`);
+        }
+      };
 
+      const band = {
+        name: 'The Boopers',
+        nationality: 'American',
+        genre: 'Polka',
+        members: 5.6,
+        formed: 1976,
+        split: false,
+        albums: [
+          {
+            name: "Don't Stop That Polka",
+            released: 1976,
+          }, 
+          {
+            name: 'We Stopped The Polka',
+            released: 1986,
+          }
+        ],
+      };
+      let bandInfo
+      bandInfo = `${band.name} is an ${band.nationality} ${band.genre} band formed in ${band.formed} with two album releases: ${band['albums'][0]['name']} released in ${band['albums'][0]['released']} and ${band['albums'][1]['name']} released in ${band['albums'][1]['released']}.`;
     </script>
 </html>
